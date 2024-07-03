@@ -1,47 +1,37 @@
 pipeline {
     agent any
 
-    environment {
-        NODEJS_HOME = tool name: 'NodeJS14', type: 'NodeJSInstallation'
-        PATH = "${env.NODEJS_HOME}/bin:${env.PATH}"
+    tools {
+        nodejs 'NodeJS 14'
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                // Checkout the repository from GitHub
-                git 'https://github.com/username/repo.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
-                // Install npm dependencies
                 sh 'npm install'
             }
         }
-
         stage('Run Tests') {
             steps {
-                // Run the tests
-                sh 'npm test'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                // Run the build process
-                sh 'npm run build'
+                sh 'npm test -- --reporters=jest-junit'  // Générer les rapports de tests en format JUnit
             }
         }
     }
 
     post {
+        always {
+            junit 'path/to/test-results.xml'  // Assurez-vous que le chemin correspond à l'emplacement des résultats
+            archiveArtifacts artifacts: 'path/to/artifacts/*', fingerprint: true
+        }
         success {
-            echo 'Build and Tests completed successfully.'
+            emailext subject: "Build Successful: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                     body: "Good job! The build ${env.BUILD_NUMBER} was successful.",
+                     recipientProviders: [[$class: 'DevelopersRecipientProvider']]
         }
         failure {
-            echo 'Build or Tests failed.'
+            emailext subject: "Build Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                     body: "Oh no! The build ${env.BUILD_NUMBER} failed. Please check the logs for details.",
+                     recipientProviders: [[$class: 'DevelopersRecipientProvider']]
         }
     }
 }
