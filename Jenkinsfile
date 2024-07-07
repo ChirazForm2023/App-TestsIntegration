@@ -18,7 +18,7 @@ pipeline {
         }
     }
 
-    post {
+    /*post {
         always {
             junit 'C:\\Users\\Chira\\Formations\\Result\\test-results.xml'  // Assurez-vous que le chemin correspond à l'emplacement des résultats
             archiveArtifacts artifacts: 'C:\\Users\\Chira\\Formations\\Result\\*', fingerprint: true
@@ -33,5 +33,5 @@ pipeline {
                      body: "Oh no! The build ${env.BUILD_NUMBER} failed. Please check the logs for details.",
                      recipientProviders: [[$class: 'DevelopersRecipientProvider']]
         }
-    }
+    }*/
 }
