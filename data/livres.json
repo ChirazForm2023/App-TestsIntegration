@@ -1,1 +1,76 @@
-[{"titre":"gone with the wind","auteur":"margaret mitchell","id":1},{"titre":"Gargantua","auteur":"Rabelais","id":2},{"titre":"La commedia divina","auteur":"Dante Alighieri","id":3},{"titre":"La dame aux Camélia","auteur":"Alexandre Dumas fils"},{"titre":"La dame aux Camélia","auteur":"Alexandre Dumas fils","id":0.9221872164666935}]
+[
+  { "titre": "gone with the wind", "auteur": "margaret mitchell", "id": 1 },
+  { "titre": "Gargantua", "auteur": "Rabelais", "id": 2 },
+  { "titre": "La commedia divina", "auteur": "Dante Alighieri", "id": 3 },
+  { "titre": "La dame aux Camélia", "auteur": "Alexandre Dumas fils", "id": 4 },
+  {
+    "titre": "La dame aux Camélia",
+    "auteur": "Alexandre Dumas fils",
+    "id": 0.9221872164666935
+  },
+  {
+    "titre": "La dame aux Camélia",
+    "auteur": "Alexandre Dumas fils",
+    "id": 0.983383181419468
+  },
+  {
+    "titre": "La dame aux Camélia",
+    "auteur": "Alexandre Dumas fils",
+    "id": 0.7424463859849619
+  },
+  {
+    "titre": "La dame aux Camélia",
+    "auteur": "Alexandre Dumas fils",
+    "id": 0.5068724643561655
+  },
+  {
+    "titre": "La dame aux Camélia",
+    "auteur": "Alexandre Dumas fils",
+    "id": 0.27260211726981276
+  },
+  {
+    "titre": "La dame aux Camélia",
+    "auteur": "Alexandre Dumas fils",
+    "id": 0.26911880947590117
+  },
+  {
+    "titre": "La dame aux Camélia",
+    "auteur": "Alexandre Dumas fils",
+    "id": 0.6082716287027121
+  },
+  {
+    "titre": "La dame aux Camélia",
+    "auteur": "Alexandre Dumas fils",
+    "id": 0.5540712064945115
+  },
+  {
+    "titre": "La dame aux Camélia",
+    "auteur": "Alexandre Dumas fils",
+    "id": 0.9888312121062173
+  },
+  {
+    "titre": "La dame aux Camélia",
+    "auteur": "Alexandre Dumas fils",
+    "id": 0.24743717495631157
+  },
+  {
+    "titre": "La dame aux Camélia",
+    "auteur": "Alexandre Dumas fils",
+    "id": 0.11299980038216861
+  },
+  {
+    "titre": "La dame aux Camélia",
+    "auteur": "Alexandre Dumas fils",
+    "id": 0.14653479114262824
+  },
+  {
+    "titre": "La dame aux Camélia",
+    "auteur": "Alexandre Dumas fils",
+    "id": 0.9721785961718645
+  },
+  {
+    "titre": "La dame aux Camélia",
+    "auteur": "Alexandre Dumas fils",
+    "id": 0.19404294153639845
+  }
+]
