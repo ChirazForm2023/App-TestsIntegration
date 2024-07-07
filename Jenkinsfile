@@ -8,12 +8,12 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Run Tests') {
             steps {
-                sh 'npm test'  // Générer les rapports de tests en format JUnit
+                bat 'npm test'  // Générer les rapports de tests en format JUnit
             }
         }
     }
